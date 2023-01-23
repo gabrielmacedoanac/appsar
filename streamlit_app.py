@@ -7,10 +7,10 @@ st.write('## Um app para localizar os normativos da ANAC')
 
 @st.cache
 def load_data():
-    df = pd.read_csv(file)
+    df = pd.read_json(file)
     return df
 
-file = "https://raw.githubusercontent.com/gabrielmacedoanac/flat-data-anac/main/regulamentos-anac-tags.csv"
+file = "https://raw.githubusercontent.com/gabrielmacedoanac/flat-data-anac/main/regulamentos-anac-tags.json"
 df = load_data()
 
 create_data = {"ementa": "text",
